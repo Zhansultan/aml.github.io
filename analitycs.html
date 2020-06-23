@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AML</title>
+</head>
+<body>
+    <header class="header container">
+        <h1>AML</h1>
+        <div class="menu row">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link menu__link ">Мониторинг транзакций</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link menu__link underline">Аналитика</a>
+                </li>
+                <li class="nav-item">
+                    <a href="risks.html" class="nav-link menu__link ">Настройка рисков</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link ">Отчеты</a>
+                </li>
+            </ul>
+            <div class="admin float-right">
+                <span class="">Абдулкаримова Камила</span>
+                <img src="images/user.svg" class="user-logo" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="container content">
+        <div class="intro row">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link menu__link selected">Аналитика</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link menu__link">Группы клиентов</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Фильтры</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Указать признак транзакции</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Топология</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Обновить</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row" id="container">
+            <style>
+              body {
+                margin: 0;
+              }
+              #graph-container {
+                top: 30%;
+                bottom: 30%;
+                left: 50px;
+                right: 50px;
+                position: absolute;
+                background: #fff;
+                height: calc(100vh - 200px);
+              }
+              #container {
+                /* position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 300%;
+                background: #ccc; */
+              }
+            </style>
+            <div class="row" id="graph-container"></div>
+            <div class="buttons">
+                <img class="user-logo button" src="images/browser.svg" alt="">
+                <img class="user-logo button " src="images/plus.svg" alt="">
+                <img class="user-logo button " src="images/minus.svg" alt="">
+                <img class="user-logo button " src="images/refresh.svg" alt="">
+                <img class="user-logo button  reverse" src="images/refresh.svg" alt="">
+                <img class="user-logo button " src="images/metal-gear.svg" alt="">
+                <img class="user-logo button " src="images/ar-camera.svg" alt="">
+                <img class="user-logo button" src="images/info.svg" alt="">
+            </div>
+          </div>
+    </section>
+</body>    
+<script
+src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- START SIGMA IMPORTS -->
+<script src="src/sigma.core.js"></script>
+<script src="src/conrad.js"></script>
+<script src="src/utils/sigma.utils.js"></script>
+<script src="src/utils/sigma.polyfills.js"></script>
+<script src="src/sigma.settings.js"></script>
+<script src="src/classes/sigma.classes.dispatcher.js"></script>
+<script src="src/classes/sigma.classes.configurable.js"></script>
+<script src="src/classes/sigma.classes.graph.js"></script>
+<script src="src/classes/sigma.classes.camera.js"></script>
+<script src="src/classes/sigma.classes.quad.js"></script>
+<script src="src/classes/sigma.classes.edgequad.js"></script>
+<script src="src/captors/sigma.captors.mouse.js"></script>
+<script src="src/captors/sigma.captors.touch.js"></script>
+<script src="src/renderers/sigma.renderers.canvas.js"></script>
+<script src="src/renderers/sigma.renderers.webgl.js"></script>
+<script src="src/renderers/sigma.renderers.svg.js"></script>
+<script src="src/renderers/sigma.renderers.def.js"></script>
+<script src="src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
+<script src="src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
+<script src="src/renderers/webgl/sigma.webgl.edges.def.js"></script>
+<script src="src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
+<script src="src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edges.def.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script>
+<script src="src/renderers/canvas/sigma.canvas.extremities.def.js"></script>
+<script src="src/renderers/svg/sigma.svg.utils.js"></script>
+<script src="src/renderers/svg/sigma.svg.nodes.def.js"></script>
+<script src="src/renderers/svg/sigma.svg.edges.def.js"></script>
+<script src="src/renderers/svg/sigma.svg.edges.curve.js"></script>
+<script src="src/renderers/svg/sigma.svg.labels.def.js"></script>
+<script src="src/renderers/svg/sigma.svg.hovers.def.js"></script>
+<script src="src/middlewares/sigma.middlewares.rescale.js"></script>
+<script src="src/middlewares/sigma.middlewares.copy.js"></script>
+<script src="src/misc/sigma.misc.animation.js"></script>
+<script src="src/misc/sigma.misc.bindEvents.js"></script>
+<script src="src/misc/sigma.misc.bindDOMEvents.js"></script>
+<script src="src/misc/sigma.misc.drawHovers.js"></script>
+<script>
+    /**
+     * This example copies basic.html, but with the sigma container somewhere in a
+     * page such that the user has to scroll to manipulate it. This example is here
+     * to facilitate testing sigma integration in real-life web pages.
+     */
+    var i,
+        s,
+        N = 100,
+        E = 500,
+        g = {
+          nodes: [],
+          edges: []
+        };
+    
+    // Generate a random graph:
+    for (i = 0; i < N; i++)
+      g.nodes.push({
+        id: 'n' + i,
+        label: 'Node ' + i,
+        x: Math.random(),
+        y: Math.random(),
+        size: Math.random(),
+        color: '#666'
+      });
+    
+    for (i = 0; i < E; i++)
+      g.edges.push({
+        id: 'e' + i,
+        source: 'n' + (Math.random() * N | 0),
+        target: 'n' + (Math.random() * N | 0),
+        size: Math.random(),
+        color: '#ccc'
+      });
+    
+    // Instantiate sigma:
+    s = new sigma({
+      graph: g,
+      container: 'graph-container'
+    });
+    </script>
+</html>

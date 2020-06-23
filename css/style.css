@@ -1,0 +1,75 @@
+.menu {
+    justify-content: space-between;
+}
+
+.menu__link {
+    border-right: 1px solid #555;
+}
+
+.content {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.selected {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.data {
+    font-size: 16px !important;
+    margin-top: 30px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.admin {
+    
+}
+
+.user-logo {
+    width: 25px;
+    height: 25px;
+}
+
+.buttons {
+    position: absolute;
+    left: 930px;
+    top: 250px;
+    width: 30px;
+    transition: all .3s ease-out;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    padding: 10px;
+    box-sizing: content-box;
+    border-radius: 8px;
+}
+    .button {
+        /* position: absolute; */
+        margin-bottom: 15px;
+    }
+
+    .button_plus {
+        left: 10px;
+    }
+
+    .button_min {
+        left: 40px;
+    }
+
+    .text__plus {
+        position: absolute;
+        left: 15px;
+        top: -4px;
+    }
+
+    .text__min {
+        position: absolute;
+        left: 48px;
+        top: -4px;
+    }
+
+    .reverse {
+        transform: rotateY(180deg);
+    }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AML</title>
+</head>
+<body>
+    <header class="header container">
+        <h1>AML</h1>
+        <div class="menu row">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link menu__link underline">Мониторинг транзакций</a>
+                </li>
+                <li class="nav-item">
+                    <a href="analitycs.html" class="nav-link menu__link">Аналитика</a>
+                </li>
+                <li class="nav-item">
+                    <a href="risks.html" class="nav-link menu__link">Настройка рисков</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link ">Отчеты</a>
+                </li>
+            </ul>
+            <div class="admin float-right">
+                <span class="">Абдулкаримова Камила</span>
+                <img src="images/user.svg" class="user-logo" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="container content">
+        <div class="intro row">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link menu__link selected">Мониторинг транзакций</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link menu__link">Посмотреть карточку транзакций</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Отправить транзакцию в КФН</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row data">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Номер транзакции</th>
+                    <th scope="col">Тип транзакции</th>
+                    <th scope="col">Номер счета отправителя</th>
+                    <th scope="col">Номер счета получателя</th>
+                    <th scope="col">Сумма транзакции</th>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Признак транзакции</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Перевод</td>
+                    <td>+7 123 555 6688</td>
+                    <td>+7 123 555 6689</td>
+                    <td>5000 тг</td>
+                    <td>01.05.2020</td>
+                    <td>Подозрительная транзакция</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Перевод</td>
+                    <td>+7 123 555 6687</td>
+                    <td>+7 123 555 6689</td>
+                    <td>50 000 тг</td>
+                    <td>25.05.2020</td>
+                    <td>Подозрительная транзакция</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Перевод</td>
+                    <td>+7 123 555 6686</td>
+                    <td>+7 123 555 6689</td>
+                    <td>7000 тг</td>
+                    <td>28.05.2020</td>
+                    <td>Подозрительная транзакция</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </section>
+</body>
+<script src="js/bootstrap.min.js"></script>
+</html>
